@@ -1,6 +1,10 @@
 package GUI;
 
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+
 import javax.swing.GroupLayout;
+import javax.swing.JFrame;
 
 import controller.Controller;
 
@@ -58,28 +62,22 @@ import controller.Controller;
 	            
 	        pack();
 	    }
-
-	    /**
-	     * @param args the command line arguments
-	     */
-	    public static void main(String args[]) {
-	        try {
-	            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-	                if ("Nimbus".equals(info.getName())) {
-	                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-	                    break;
-	                }
-	            }
-	        } catch (Exception ex) {
-	        	System.out.println(ex.getStackTrace());
-	        }
-	        //</editor-fold>
-
-	        /* Create and display the form */
-	        java.awt.EventQueue.invokeLater(new Runnable() {
-	            public void run() {
-	                new ObjectiveFashionGUI().setVisible(true);
-	            }
-	        });
+	    
+	    public static void main(String[] args) {
+		    	try {
+		            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+		                if ("Nimbus".equals(info.getName())) {
+		                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+		                    break;
+		                }
+		            }
+		        } catch (Exception ex) {
+		        	System.out.println(ex.getStackTrace());
+		        }
+		        java.awt.EventQueue.invokeLater(new Runnable() {
+		            public void run() {
+		                new ObjectiveFashionGUI().setVisible(true);
+		            }
+		        });
 	    }
-}
+	}
